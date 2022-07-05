@@ -1,23 +1,82 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route, Link } from "react-router-dom";
+import HomePage from "./view/homePage";
+import AboutPage from "./view/aboutPage";
+import More from "./view/more";
+import Invoices from "./view/invoice";
+import Salary from "./view/salary";
+import SingleInvoice from "./view/singleInvoice";
 
 function App() {
+  let invoices = [
+    {
+      name: "Santa Monica",
+      number: 1995,
+      amount: "$10,800",
+      due: "12/05/1995",
+    },
+    {
+      name: "Stankonia",
+      number: 2000,
+      amount: "$8,000",
+      due: "10/31/2000",
+    },
+    {
+      name: "Ocean Avenue",
+      number: 2003,
+      amount: "$9,500",
+      due: "07/22/2003",
+    },
+    {
+      name: "Tubthumper",
+      number: 1997,
+      amount: "$14,000",
+      due: "09/01/1997",
+    },
+    {
+      name: "Wide Open Spaces",
+      number: 1998,
+      amount: "$4,600",
+      due: "01/27/1998",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="nav nav-fill bg-dark">
+        <Link to="/" className="nav-item nav-link">
+          Home
+        </Link>
+        <Link to="/salary" className="nav-item nav-link">
+          Salary
+        </Link>
+      </div>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="salary" element={<Salary />}>
+          <Route path="invoices" element={<Invoices invoices={invoices}/>}>
+            <Route path=":id" element={<SingleInvoice invoices={invoices}/>}/>
+          </Route>
+          <Route path="more" element={<More />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>404 not found!</p>
+              </main>
+            }
+          />
+        </Route>
+        <Route path="about/:id" element={<AboutPage id={"nothing"} />} />
+        <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>404 not found!</p>
+              </main>
+            }
+          />
+      </Routes>
     </div>
   );
 }
