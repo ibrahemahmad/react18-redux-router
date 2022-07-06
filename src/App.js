@@ -52,10 +52,18 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage  invoices={invoices}/>} />
         <Route path="salary" element={<Salary />}>
-          <Route path="invoices" element={<Invoices invoices={invoices}/>}>
-            <Route path=":id" element={<SingleInvoice invoices={invoices}/>}/>
+          <Route path="invoices" element={<Invoices invoices={invoices} />}>
+            <Route path=":id" element={<SingleInvoice invoices={invoices} />} />
+            <Route
+              index
+              element={
+                <main style={{ padding: "1rem" }}>
+                  <p>Select an invoices</p>
+                </main>
+              }
+            />
           </Route>
           <Route path="more" element={<More />} />
           <Route
@@ -66,16 +74,24 @@ function App() {
               </main>
             }
           />
-        </Route>
-        <Route path="about/:id" element={<AboutPage id={"nothing"} />} />
-        <Route
-            path="*"
+          <Route
+            index
             element={
               <main style={{ padding: "1rem" }}>
-                <p>404 not found!</p>
+                <p>Select an tab</p>
               </main>
             }
           />
+        </Route>
+        <Route path="about/:id" element={<AboutPage id={"nothing"} />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>404 not found!</p>
+            </main>
+          }
+        />
       </Routes>
     </div>
   );
