@@ -6,6 +6,7 @@ import More from "./view/more";
 import Invoices from "./view/invoice";
 import Salary from "./view/salary";
 import SingleInvoice from "./view/singleInvoice";
+import Todo from "./view/todo";
 
 function App() {
   let invoices = [
@@ -49,6 +50,9 @@ function App() {
         <Link to="/salary" className="nav-item nav-link">
           Salary
         </Link>
+        <Link to="/todo" className="nav-item nav-link">
+          Todo
+        </Link>
       </div>
 
       <Routes>
@@ -82,6 +86,9 @@ function App() {
               </main>
             }
           />
+        </Route>
+        <Route path="todo" element={<Todo/>}>
+
         </Route>
         <Route path="about/:id" element={<AboutPage id={"nothing"} />} />
         <Route
