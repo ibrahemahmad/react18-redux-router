@@ -10,5 +10,5 @@ You may also see any lint errors in the console.
 
 #what is that?
 
-this is a boiler code for new React js 18 
-whith ##redux-toolkit and ##react-router v6
+this is a boiler code for new ###React-js-18 
+whith ###redux-toolkit and ###react-router v6
