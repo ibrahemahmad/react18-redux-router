@@ -4,7 +4,6 @@ import { constats } from '../../config/constant'
 import { axiosGet } from '../../config/globalAxios'
 
 export const fetchTodos = createAsyncThunk('todos/fetchTodos', async (type) => {
-console.log("check type",type);
   try {
     const response = await axiosGet({
       url: `https://jsonplaceholder.typicode.com/${type}`
