@@ -17,7 +17,7 @@ export default function WithThunk() {
   const dispatch = useDispatch()
   useEffect(() => {
     if (todoStatus === constats.idle) {
-      dispatch(fetchTodos('todos'))
+      dispatch(fetchTodos('todos')).unwrap()
     }
   }, [todoStatus, dispatch])
   let content = <></>
