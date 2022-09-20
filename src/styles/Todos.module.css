@@ -1,3 +1,8 @@
+ 
+.nav_space{
+    top: 43px;
+}
+
 .main {
     overflow-y: scroll;
     width: 100%;
@@ -8,7 +13,7 @@
     padding-top: 20px;
     max-height: max-content;
     scroll-behavior: smooth;
-    
+
 }
 
 .cardTodo {

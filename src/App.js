@@ -10,6 +10,7 @@ import Todo from './view/todo'
 import WithThunk from './view/typeTodo/WithThunk'
 import TodoSimple from './view/typeTodo/TodoSimple'
 import { NotFound } from './view/notFound'
+import { WithRtkQuery } from './view/typeTodo/WithRtkQuery'
 
 function App() {
   let invoices = [
@@ -85,6 +86,7 @@ function App() {
         <Route path="todo" element={<Todo />}>
           <Route index element={<TodoSimple />} />
           <Route path="with-thunk" element={<WithThunk />} />
+          <Route path="with-RtkQuery" element={<WithRtkQuery />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 
