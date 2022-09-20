@@ -1,0 +1,49 @@
+.main {
+    overflow-y: scroll;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    max-height: max-content;
+    scroll-behavior: smooth;
+    
+}
+
+.cardTodo {
+    width: 50%;
+    border: 2px dashed gray;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.cardTodo .title {
+    color: rgba(17, 17, 17, 0.8);
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.cardTodo .discription {
+    color: rgb(61, 61, 61);
+    text-align: start;
+    max-height: fit-content;
+}
+
+.cardTodo .check_box_style {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media screen and (max-width:700px) {
+    .cardTodo {
+        width: calc(100vw - 40px) !important;
+        background-color: antiquewhite;
+    }
+
+}
