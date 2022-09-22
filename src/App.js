@@ -11,7 +11,7 @@ import WithThunk from './view/typeTodo/WithThunk'
 import TodoSimple from './view/typeTodo/TodoSimple'
 import { NotFound } from './view/notFound'
 import { WithRtkQuery } from './view/typeTodo/WithRtkQuery'
-
+import React from 'react'
 function App() {
   let invoices = [
     {

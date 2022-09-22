@@ -19,8 +19,7 @@ export default function TodoSimple() {
   }, [])
   return listTodo?.length > 0 ? (
     listTodo
-      .slice(0, 20)
-      .reverse()
+      ?.reverse()
       ?.map((eTodo) => (
         <TodoCards
           title={eTodo?.id}
