@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addOne, minusOne } from "../redux/reducers/countSlice";
 import _ from "lodash";
-import { NavLink, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { NavLink, useSearchParams } from "react-router-dom";
 
 export default function HomePage(props) {
   const {invoices}=props
   //path name and query
-  let location = useLocation();
+  // let location = useLocation();
   const user = useSelector((state) => state.user);
   const count = useSelector((state) => state.count);
   const dispatch = useDispatch();
   //from this router hook you can route programmaticaly
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   //  navigate("/invoices" + location.search);
   let [searchParams, setSearchParams] = useSearchParams();
   const onSearch = _.debounce((val) => {

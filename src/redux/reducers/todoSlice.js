@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, nanoid } from '@reduxjs/toolkit'
-import { act } from 'react-dom/test-utils'
+// import { act } from 'react-dom/test-utils'
 import { constats } from '../../config/constant'
 import { axiosGet } from '../../config/globalAxios'
 

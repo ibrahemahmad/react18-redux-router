@@ -10,7 +10,7 @@ export default function SingleInvoice(props) {
     useEffect(() => {
       if (params.id) {
         const result = _.find(invoices, function (eInv) {
-          if (eInv.number == params.id) {
+          if (eInv.number === params.id) {
             return eInv;
           }
         });

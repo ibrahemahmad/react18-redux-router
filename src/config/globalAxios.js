@@ -1,5 +1,5 @@
 import axios from "axios";
-import { globalStore } from "..";
+// import { globalStore } from "..";
 
 export const globalAxios = axios.create({
   baseURL: `https://jsonplaceholder.typicode.com/`,
