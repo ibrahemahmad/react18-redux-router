@@ -1,0 +1,25 @@
+[debug] [2022-09-22T10:04:09.968Z] ----------------------------------------------------------------------
+[debug] [2022-09-22T10:04:09.970Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Click\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-09-22T10:04:09.970Z] CLI Version:   11.9.0
+[debug] [2022-09-22T10:04:09.970Z] Platform:      win32
+[debug] [2022-09-22T10:04:09.970Z] Node Version:  v16.14.0
+[debug] [2022-09-22T10:04:09.971Z] Time:          Thu Sep 22 2022 13:04:09 GMT+0300 (Arabian Standard Time)
+[debug] [2022-09-22T10:04:09.971Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-22T10:04:10.040Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-22T10:04:10.040Z] > authorizing via signed-in user (ibo141998@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\boiler-code\react18-redux-router
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
