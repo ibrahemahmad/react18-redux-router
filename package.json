@@ -1,6 +1,7 @@
 {
   "name": "test-react18",
   "version": "0.1.0",
+  "homepage": "https://ibrahemahmad.github.io/react18-redux-router",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
