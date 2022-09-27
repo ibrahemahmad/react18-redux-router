@@ -5,9 +5,10 @@ export const TodoCards = ({
   title = '',
   id,
   discription,
-  isCompleted = false
+  isCompleted = false,
+  onDelete,
+  onUpdate
 }) => {
-  const [isComplete, setIsComplete] = useState(isCompleted)
   return (
     <div className={classes.cardTodo}>
       <div className={classes.title}>{title}</div>
@@ -16,9 +17,12 @@ export const TodoCards = ({
       <input
         className={classes.check_box_style}
         type="checkbox"
-        checked={isComplete}
-        onChange={(event)=>setIsComplete(event.target.checked)}
+        checked={isCompleted}
+        onChange={(event) => onUpdate(event.target.checked)}
       />
+      <button onClick={onDelete} className={classes.delete_btn}>
+        Delete
+      </button>
     </div>
   )
 }
